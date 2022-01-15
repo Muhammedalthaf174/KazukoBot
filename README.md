@@ -17,7 +17,7 @@ News channel as at [Kazuko Updates](https://t.me/KazukoUpdates)
  - This bot is forked from yone and saitama (which is based on marie)
  - Your code must be open source and a link to our repo
  - Fork and deploy on your own risk...
- 
+ https://github.com/Muhammedalthaf174/KazukoBot
 
 
 <details>
