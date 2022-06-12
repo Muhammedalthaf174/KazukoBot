@@ -100,11 +100,11 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="yellow")
     fname2 = "LogoByKazuko.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption=" Made By [Kazuko](https://t.me/KazukoRobot)")
+    await tbot.send_file(event.chat_id, fname2, caption=" Made By [Tezza](https://t.me/Tezza_Robot)")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Report @KazukoSupportChat, {e}')
+   await event.reply(f'Error Report @tezzasupportgroup, {e}')
 
 
 
@@ -140,11 +140,11 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="white", stroke_width=0, stroke_fill="white")
     fname2 = "LogoByKazuko.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By [Kazuko](https://t.me/KazukoRobot)")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By [Tezza](https://t.me/Tezza_Robot)")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Report @KazukoSupportChat, {e}')
+   await event.reply(f'Error Report @Tezzasupportgroup, {e}')
 
 file_help = os.path.basename(__file__)
 file_help = file_help.replace(".py", "")
@@ -152,7 +152,7 @@ file_helpo = file_help.replace("_", " ")
 
 
 __help__ = """
- ❍ /logo text :  Create your logo with your name
- ❍ /wlogo text :  Create your logo with your name
+ • /logo text :  Create your logo with your name
+ • /wlogo text :  Create your logo with your name
  """
 __mod_name__ = "Logo"
