@@ -54,3 +54,4 @@ better_profanity
 motor
 heroku3
 future
+emoji
