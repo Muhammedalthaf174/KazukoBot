@@ -222,26 +222,14 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
-    else:
+   else:
         update.effective_message.reply_text(
             "ʜᴇʟʟᴏ! ɪ'ᴍ ᴀʟɪᴠᴇ".format(
                 
             ),
             parse_mode=ParseMode.HTML,
-        )
-                    [
-                        InlineKeyboardButton(text="Support",url="https://t.me/tezzasupportgroup",
-                        ),
-                        InlineKeyboardButton(text="Updates",url="https://t.me/tezzasupportchannel",
-                        ),
-                    ],
-                    [  
-                        InlineKeyboardButton(text="Try Inline",switch_inline_query_current_chat="",
-                        ),
-                    ]
-                ]
-            ),
-        )
+        ) 
+                    
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
