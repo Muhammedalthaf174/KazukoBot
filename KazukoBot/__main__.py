@@ -74,11 +74,11 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hey there, I'm Kazuko,
-
-I am an Anime themed group management bot
-to help maintaining groups with my super advanced features.
-
+────「 Tezza Robot 」────
+Hᴇʟʟᴏ ɪ'ᴍ ᴛᴇᴢᴢᴀ   
+✪ I'ᴍ ᴘᴏᴡᴇʀғᴜʟ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ [🔥](https://telegra.ph/file/a8cc05eb6490cf23a57aa.jpg)
+✪ I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!
+───────────────────────
 I have lots of handy features such as:
 ‣ Warning system
 ‣ Artificial intelligence
@@ -86,28 +86,25 @@ I have lots of handy features such as:
 ‣ Note keeping system
 ‣ Filters keeping system
 ‣ Approvals and much more.
-
-So what are you waiting for?
-Add me in your groups and promote me to make me function well[.](https://telegra.ph/file/6d0f29836fda1effbb4ba.jpg)
+───────────────────────
+➛ᴛʀʏ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴀʙɪʟɪᴛɪ
 """
 buttons = [
     [
-        InlineKeyboardButton(text="About & Support", callback_data="kazuko_"),
-        InlineKeyboardButton(text="Try inline",switch_inline_query_current_chat=""),                            
+        InlineKeyboardButton(text="About", callback_data="kazuko_"),
+        InlineKeyboardButton(text="Updates", url="https://t.me/tezzasupportchannel"),
       ],
     [
-        InlineKeyboardButton(
-            text="️Add Kazuko to your group", url="t.me/KazukoRobot?startgroup=true",
-        ),
-    ],
-    [ 
-        InlineKeyboardButton(text="Help & Commands", callback_data="help_back"),
+        InlineKeyboardButton(text="Support", url="https://t.me/tezzaSupportgroup"),
+        InlineKeyboardButton(text="Commands", callback_data="help_back"),
+      ],
+    [
+        InlineKeyboardButton(text="️Add Me", url="t.me/tezza_robot?startgroup=true"),
     ],
 ]
 
-
 HELP_STRINGS = """
-Hey there! My name is Kazuko.
+Hey there! My name is Tezza.
 Have a look at the following for an idea of some of
 the things I can help you with.
 Main commands available:
@@ -119,7 +116,7 @@ Main commands available:
  Click on the buttons below to get documentation about specific modules!
 """
 
-KAZUKO_IMG = "https://telegra.ph/file/6d0f29836fda1effbb4ba.jpg"
+KAZUKO_IMG = "https://telegra.ph/file/9c3b714fda09d8ff67e1f.jpg"
 
 DONATE_STRING =  """Heya, glad to hear you want to donate!
  You can support the project via [Paypal](ko-fi.com/heyaaman) or by contacting @heyaaman \
@@ -226,15 +223,23 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_photo(
-            KAZUKO_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-                uptime
+        update.effective_message.reply_text(
+            "ʜᴇʟʟᴏ! ɪ'ᴍ ᴀʟɪᴠᴇ".format(
+                
             ),
             parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Support", url="t.me/KazukoSupportChat"), InlineKeyboardButton(text="Try Inline",switch_inline_query_current_chat=""),
-                  InlineKeyboardButton(text="Updates", url="t.me/KazukoUpdates")]]               
-                  
+        )
+                    [
+                        InlineKeyboardButton(text="Support",url="https://t.me/tezzasupportgroup",
+                        ),
+                        InlineKeyboardButton(text="Updates",url="https://t.me/tezzasupportchannel",
+                        ),
+                    ],
+                    [  
+                        InlineKeyboardButton(text="Try Inline",switch_inline_query_current_chat="",
+                        ),
+                    ]
+                ]
             ),
         )
 
@@ -374,10 +379,10 @@ def kazuko_about_callback(update, context):
 • I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
 • I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
 • I check for admins'permissions before executing any command and more stuffs
-\n_Kazuko's licensed under the GNU General Public License v3.0_
-Have any question about Kazuko?, let us know at Kazuko's support chat.
+\n_Tezza's licensed under the GNU General Public License v3.0_
+Have any question about Tezza?, let us know at Tezza's support chat.
 and also almost all modules usage defined in the help menu, checkout by sending /help
-or choosing help button at home menu and report error/bugs at Kazuko's support chat...""",
+or choosing help button at home menu and report error/bugs at Tezza's support chat...""",
 
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -385,28 +390,17 @@ or choosing help button at home menu and report error/bugs at Kazuko's support c
                 [
                     [
                         InlineKeyboardButton(
-                            text=" Setup Guide ", url="https://t.me/KazukoUpdates/22",
+                            text="Setup Guide", url="https://t.me/tezzasupportchannel",
                         ),
+                        InlineKeyboardButton(
+                            text="Support chat", url="https://t.me/tezzasupporttchannel",
+                        ),
+                    ],
+                    [
                         InlineKeyboardButton(text="T & C", url="https://telegra.ph/Terms-and-Conditions-10-26",
                         ),
                         InlineKeyboardButton(
-                            text="Source code", url="https://github.com/heyaaman/KazukoBot",
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Support", url="https://t.me/KazukoSupportChat",
-                        ),
-                        InlineKeyboardButton(
-                             text="Updates", url="https://t.me/KazukoUpdates",
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Network", url="https://t.me/Phoenix_Empire/28",
-                        ),   
-                        InlineKeyboardButton(
-                            text="Gban logs", url="https://t.me/CFC_BotsGban_logs",
+                            text="Gban logs", url="https://t.me/CFC_tezzabotlogs",
                         ),   
                     ],     
                     [InlineKeyboardButton(text="Back", callback_data="kazuko_back")],
@@ -427,8 +421,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *kazuko*
-                 \nHere is the [Source Code](https://github.com/heyaaman/KazukoBot) .""",
+            text=""" Hi..🤗 I'm *Tezza*
+                 \nHere is the [Support Chat](https://t.me/tezzasupportgroup) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
